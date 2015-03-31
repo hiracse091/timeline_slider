@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Naher slider</title>
+	<link rel="stylesheet" type="text/css" href="slider.css">
+	<script type="text/javascript" src="jquery-1.10.2.js"></script>  
+	<script type="text/javascript" src="slider.js"></script>
+	<style type="text/css">
+	body{
+		background-color: rgb(23,23,23);
+		color: white;
+	}
+	.wrapperSlider{
+		width: 1100px;
+		height: 350px;
+		position: relative;
+		float: left;
+		background: transparent;
+		z-index: 1000;
+		overflow: hidden;
+	}
+	.btnnext{
+		float: right;
+		position: relative;
+		height: 300px;
+		width:50px;
+		color: white;
+	}
+	.btnprev{
+		float: left;
+		position: relative;
+		height: 300px;
+		width:50px;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+<div class="btnprev">	<div id="prev"></div></div>
+<div class="wrapperSlider">
+	<div class="top-slider-main">
+	    
+	</div>
+</div>
+<div class="btnnext">
+	<div id="next"></div>
+</div>
+
+	
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		window.onresize = function(){
+			$('.wrapperSlider').css({
+				width:window.innerWidth - 160,
+				left:30
+			});
+		}
+		/*$('.wrapperSlider').css({
+			width:window.innerWidth - 160,
+			left:30
+		});*/
+		window.onresize()
+		initSlider();
+	});
+</script>
+</body>
+</html>
